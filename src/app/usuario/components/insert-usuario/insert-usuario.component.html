@@ -1,0 +1,89 @@
+<div class="card" style="margin:1rem">
+  <div style="padding: 0.5rem;">
+    <h3>{{operacion}} Usuario</h3>
+  </div>
+  
+  <form [formGroup]="myform">
+    <div style="display: grid;grid-template-columns: 50% 50%;">
+      <div style="padding: 0.5rem;">
+        <div class="mb-3">
+          <label for="input1" class="form-label">Nombre</label>
+          <input formControlName="nombre" type="text" id="input1" class="form-control"
+            aria-describedby="passwordHelpBlock">
+          <div id="passwordHelpBlock" class="form-text">
+            <ng-container *ngFor="let validation of validation_messages.nombre">
+              <div class="error-message"
+                *ngIf="myform.get('nombre').hasError(validation.type) && (myform.get('nombre').dirty || myform.get('nombre').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="input2" class="form-label">Apellido</label>
+          <input formControlName="apellido" type="text" id="input2" class="form-control"
+            aria-describedby="passwordHelpBlock">
+          <div id="passwordHelpBlock" class="form-text">
+            <ng-container *ngFor="let validation of validation_messages.apellido">
+              <div class="error-message"
+                *ngIf="myform.get('apellido').hasError(validation.type) && (myform.get('apellido').dirty || myform.get('apellido').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="input2" class="form-label">Correo</label>
+          <input formControlName="correo" type="text" id="input2" class="form-control"
+            aria-describedby="passwordHelpBlock">
+          <div id="passwordHelpBlock" class="form-text">
+            <ng-container *ngFor="let validation of validation_messages.correo">
+              <div class="error-message"
+                *ngIf="myform.get('correo').hasError(validation.type) && (myform.get('correo').dirty || myform.get('correo').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 0.5rem;">
+        <div class="mb-3">
+          <label for="input2" class="form-label">Cedula</label>
+          <input formControlName="cedula" type="text" id="input2" class="form-control"
+            aria-describedby="passwordHelpBlock">
+          <div id="passwordHelpBlock" class="form-text">
+            <ng-container *ngFor="let validation of validation_messages.cedula">
+              <div class="error-message"
+                *ngIf="myform.get('cedula').hasError(validation.type) && (myform.get('cedula').dirty || myform.get('cedula').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="input2" class="form-label">Telefono</label>
+          <input formControlName="telefono" type="text" id="input2" class="form-control"
+            aria-describedby="passwordHelpBlock">
+          <div id="passwordHelpBlock" class="form-text">
+            <ng-container *ngFor="let validation of validation_messages.telefono">
+              <div class="error-message"
+                *ngIf="myform.get('telefono').hasError(validation.type) && (myform.get('telefono').dirty || myform.get('telefono').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="mb-3" style="display: flex;">
+       
+          <button type="submit" class="btn btn-dark" (click)="guardar_cuenta()">{{operacion}}</button>
+          <div style="padding-left: 0.5rem;padding-right: 0.5rem;"></div>
+          <button type="submit" class="btn btn-light" (click)="limpiar_form()">Limpiar</button>
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+  <p-toast ></p-toast>
+</div>
+

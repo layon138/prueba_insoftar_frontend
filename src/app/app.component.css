@@ -1,0 +1,62 @@
+body{
+    background-image: url('../assets/fondo.svg');
+    width: 100%;
+    height: 100vh;
+}
+
+.validation-errors{
+        color:#F22738;
+        font-style: italic;
+        font-family: 'Noto Sans JP', sans-serif;
+        margin-bottom: 0.5rem;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    width: 480px;
+}
+
+p,label,input,div,h2{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h2{
+    font-weight: bold;
+    color: #241D40;
+}
+
+.form-error{
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+}
+
+
+.error{
+    color:#F22738;
+    font-style: italic;
+}
+
+.p-field{
+    color:#241D40
+}
+
+::ng-deep.p-selectbutton .p-button.p-highlight {
+    background: #CB3DF2;
+    font-family: 'Noto Sans JP', sans-serif;
+    border-color: #CB3DF2;
+    color: #ffffff;
+}
+::ng-deep.p-selectbutton .p-button.p-highlight:hover {
+    background: #F1A0F2;
+    border-color: #F1A0F2;
+    color: #ffffff;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+::ng-deep .p-button-label {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+::ng-deep .p-button {
+    border: 1px solid #F23DE6;
+}
